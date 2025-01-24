@@ -48,11 +48,12 @@ jobs:
         mv tfsec /usr/local/bin/
         tfsec --version
 
-    - name: 'Terraform import'
-      run: terraform import aws_s3_bucket.example my-tf-example-bucket-99
 
     - name: 'Terraform Init'
       run: terraform init
+
+    - name: 'Terraform import'
+      run: terraform import aws_s3_bucket.example my-tf-example-bucket-99
 
     - name: 'Terraform Format'
       run: terraform fmt
